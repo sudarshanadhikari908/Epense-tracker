@@ -17,6 +17,10 @@ dbConnect()
 
 // middleware
 app.use(express.json());
+ 
+app.get('/', (req, res)=>{
+    res.json({msg: "Welcome to expense tracker api"})
+})
 
 // routes
 app.use("/api/users", userRoute);
